@@ -4,7 +4,6 @@ const log = console.log;
 
 var score = 0;
 
-// data of high score
 var highScores = [
     {
       name: "Kaustubh",
@@ -17,7 +16,6 @@ var highScores = [
     },
   ]
 
-  //array of objects
   var questions = [{
     array : ["100-10", 110, 90, "10010"],
     question: `let x = "100";
@@ -76,7 +74,6 @@ console.log('4. In MCQ based questions you have to type the Serial Number / Inde
 
 
 
-// play function
 function play(listOfAnswers,question,answer) {
     let userAnswer = readlineSync.keyInSelect(listOfAnswers, question);
 
@@ -96,7 +93,6 @@ function play(listOfAnswers,question,answer) {
 function game() {
   for (var i=0; i<questions.length; i++) {
     
-    // introduce levels in quiz
     if(i==2&&score>=1){
         log(chalk.green("Proceeding to next level"));
     }
